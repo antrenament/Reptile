@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "lodash": ["lodash-es"],
+      "$types": ["./src/types.d.ts"],
+      "$types/api": ["./src/api.d.ts"],
+      "$application/*": ["./src/application/*"],
+      "$components/*": ["./src/components/*"],
+      "$queries/*": ["./src/queries/*"],
+      "$pages/*": ["./src/pages/*"],
+      "$utils/*": ["./src/utils/*"],
+      "$hooks/*": ["./src/hooks/*"],
+      "$controllers/*": ["./src/controllers/*"],
+      "$/*": ["./src/*"],
+      "$entities.types": ["../entities.types.ts"],
+      "$ztypes/*": ["../ztypes/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
