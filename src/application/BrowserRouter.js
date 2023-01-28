@@ -8,7 +8,7 @@ const HistoryContext = createContext(history);
 
 export const useHistory = () => useContext(HistoryContext);
 
-export default function BrowserRouter(props: any) {
+export default function BrowserRouter(props) {
   const historyRef = useRef(history);
 
   const [{ action, location }, setHistoryState] = useState({

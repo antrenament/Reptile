@@ -1,8 +1,8 @@
 import { Event, EventHandlersSet, EventHandler, EventDataType } from '$types';
 
-const events: Map<Event, Set<EventHandler<any>>> = new Map();
+const events = new Map();
 
-function emit<E extends Event>(event: E, data?: EventDataType<E>) {
+function emit(event) {
   const handlers = events.get(event);
 
   if (handlers) {
@@ -10,7 +10,7 @@ function emit<E extends Event>(event: E, data?: EventDataType<E>) {
       for (const handler of handlers) {
         try {
           handler(data);
-        } catch (error: any) {
+        } catch (error) {
           emit(Event.ERROR, error);
         }
       }
@@ -18,8 +18,8 @@ function emit<E extends Event>(event: E, data?: EventDataType<E>) {
   }
 }
 
-function on<E extends Event>(event: E, handler: EventHandler<E>) {
-  let handlers: EventHandlersSet<E> | undefined = events.get(event);
+function on(event) {
+  let handlers = events.get(event);
 
   if (!handlers) {
     handlers = new Set();
@@ -31,7 +31,7 @@ function on<E extends Event>(event: E, handler: EventHandler<E>) {
   return () => off(event, handler);
 }
 
-function off<E extends Event>(event: E, handler?: EventHandler<E>) {
+function off(event) {
   if (handler) {
     events.get(event)?.delete(handler);
   } else {
