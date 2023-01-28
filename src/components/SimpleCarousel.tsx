@@ -6,7 +6,7 @@ function HeaderCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://dummyimage.com/640x360/fff/aaa"
+          src="https://dummyimage.com/600x300/fff/aaa"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -17,7 +17,7 @@ function HeaderCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://dummyimage.com/640x360/fff/aaa"
+          src="https://dummyimage.com/600x300/fff/aaa"
           alt="Second slide"
         />
 
@@ -29,7 +29,7 @@ function HeaderCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://dummyimage.com/640x360/fff/aaa"
+          src="https://dummyimage.com/600x300/fff/aaa"
           alt="Third slide"
         />
 
