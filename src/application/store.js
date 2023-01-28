@@ -25,29 +25,29 @@ export const store = {
     return zustand.getState();
   },
 
-  is(key: any, value: any) {
-    const storeValue = zustand((state: any) => state[key]);
+  is(key, value) {
+    const storeValue = zustand((state) => state[key]);
 
     return storeValue === value;
   },
 
-  has(key: string) {
+  has(key) {
     return this.get(key) !== undefined;
   },
 
-  value<U extends any>(key: U): any[U] {
-    return zustand((state: any) => state[key]);
+  value(key) {
+    return zustand((state) => state[key]);
   },
 
-  get(key: string): any {
+  get(key) {
     return $get(zustand.getState(), key);
   },
 
-  set(key: string, value: any): void {
+  set(key, value) {
     zustand.setState({ ...$set(zustand.getState(), key, value) });
   },
 
-  update(data: Partial<any>): void {
+  update(data) {
     const current = zustand.getState();
     const updated = merge(current, data);
     zustand.setState(updated);

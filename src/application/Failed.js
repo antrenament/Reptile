@@ -1,13 +1,15 @@
-export default class Failed extends Error {
-  id?: string;
-  type: string;
-  code?: string | number;
-  name: string;
-  message: string;
-  cause?: Error | Failed;
-  meta?: Record<string, any>;
+import { type } from "os";
 
-  constructor(args: Partial<Failed>) {
+export default class Failed extends Error {
+  id;
+  type;
+  code;
+  name;
+  message;
+  cause;
+  meta;
+
+  constructor() {
     super();
 
     this.name = args.name || 'Failed';
