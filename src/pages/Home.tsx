@@ -1,13 +1,16 @@
-import SimpleCarousel from '$components/SimpleCarousel';
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, NavbarBrand } from 'react-bootstrap';
+import Navigation from "$components/Navigation"
+import HeaderCarousel from '$components/SimpleCarousel';
+
+
 
 export default function Home() {
   return (
     <>
-      <div className="h1">Home</div>
-      <Container style={{ display: 'flex', justifyContent: 'center' }}>
-        <SimpleCarousel />
+      <Navigation />
+      <Container>
+        <HeaderCarousel />
       </Container>
     </>
   );

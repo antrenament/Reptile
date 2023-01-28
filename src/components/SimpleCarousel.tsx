@@ -1,41 +1,40 @@
 import Carousel from 'react-bootstrap/Carousel';
 
-const SimpleCarousel = () => {
+function HeaderCarousel() {
   return (
-    <Carousel variant="light" className="w-100 h-50" style={{maxWidth: 780}}>
-      <Carousel.Item >
+    <Carousel variant='dark' style={{ border: "1px solid gray" }}>
+      <Carousel.Item>
         <img
-          className="d-block w-30"
-          src="/media/01.jpg"
+          className="d-block w-100"
+          src="https://dummyimage.com/640x360/fff/aaa"
           alt="First slide"
-          style={{width: '100%', maxHeight: 300}}
         />
         <Carousel.Caption>
-          <h5>First slide label</h5>
+          <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-30"
-          src="/media/02.jpg"
+          className="d-block w-100"
+          src="https://dummyimage.com/640x360/fff/aaa"
           alt="Second slide"
-          style={{width: '100%', maxHeight: 300}}
         />
+
         <Carousel.Caption>
-          <h5>Second slide label</h5>
+          <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-30"
-          src="/media/03.jpg"
+          className="d-block w-100"
+          src="https://dummyimage.com/640x360/fff/aaa"
           alt="Third slide"
-          style={{width: '100%', maxHeight: 300}}
         />
+
         <Carousel.Caption>
-          <h5>Third slide label</h5>
+          <h3>Third slide label</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
@@ -45,4 +44,4 @@ const SimpleCarousel = () => {
   );
 }
 
-export default SimpleCarousel;
+export default HeaderCarousel;

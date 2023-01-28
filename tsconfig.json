@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -17,21 +21,53 @@
     "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
-      "lodash": ["lodash-es"],
-      "$types": ["./src/types.d.ts"],
-      "$types/api": ["./src/api.d.ts"],
-      "$application/*": ["./src/application/*"],
-      "$components/*": ["./src/components/*"],
-      "$queries/*": ["./src/queries/*"],
-      "$pages/*": ["./src/pages/*"],
-      "$utils/*": ["./src/utils/*"],
-      "$hooks/*": ["./src/hooks/*"],
-      "$controllers/*": ["./src/controllers/*"],
-      "$/*": ["./src/*"],
-      "$entities.types": ["../entities.types.ts"],
-      "$ztypes/*": ["../ztypes/*"]
+      "lodash": [
+        "lodash-es"
+      ],
+      "$types": [
+        "src/types.d.js"
+      ],
+      "$types/api": [
+        "./src/api.d.ts"
+      ],
+      "$application/*": [
+        "./src/application/*"
+      ],
+      "$components/*": [
+        "./src/components/*"
+      ],
+      "$queries/*": [
+        "./src/queries/*"
+      ],
+      "$pages/*": [
+        "./src/pages/*"
+      ],
+      "$utils/*": [
+        "./src/utils/*"
+      ],
+      "$hooks/*": [
+        "./src/hooks/*"
+      ],
+      "$controllers/*": [
+        "./src/controllers/*"
+      ],
+      "$/*": [
+        "./src/*"
+      ],
+      "$entities.types": [
+        "../entities.types.ts"
+      ],
+      "$ztypes/*": [
+        "../ztypes/*"
+      ]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
