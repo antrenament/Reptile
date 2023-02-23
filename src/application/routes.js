@@ -1,3 +1,3 @@
-import Home from '$pages/Home';
+import Home from '$pages/Home'
 
-export const publicRoutes = { '/': { component: Home }, };
+export const publicRoutes = { '/': { component: Home } }

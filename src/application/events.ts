@@ -1,42 +1,42 @@
-import { Event, EventHandlersSet, EventHandler, EventDataType } from '$types';
+import { Event, EventHandlersSet, EventHandler, EventDataType } from '$types'
 
-const events = new Map();
+const events: Map<Event, Set<EventHandler<any>>> = new Map()
 
-function emit(event) {
-  const handlers = events.get(event);
+function emit<E extends Event>(event: E, data?: EventDataType<E>) {
+  const handlers = events.get(event)
 
   if (handlers) {
     setTimeout(() => {
       for (const handler of handlers) {
         try {
-          handler(data);
-        } catch (error) {
-          emit(Event.ERROR, error);
+          handler(data)
+        } catch (error: any) {
+          emit(Event.ERROR, error)
         }
       }
-    }, 0);
+    }, 0)
   }
 }
 
-function on(event) {
-  let handlers = events.get(event);
+function on<E extends Event>(event: E, handler: EventHandler<E>) {
+  let handlers: EventHandlersSet<E> | undefined = events.get(event)
 
   if (!handlers) {
-    handlers = new Set();
-    events.set(event, handlers);
+    handlers = new Set()
+    events.set(event, handlers)
   }
 
-  handlers.add(handler);
+  handlers.add(handler)
 
-  return () => off(event, handler);
+  return () => off(event, handler)
 }
 
-function off(event) {
+function off<E extends Event>(event: E, handler?: EventHandler<E>) {
   if (handler) {
-    events.get(event)?.delete(handler);
+    events.get(event)?.delete(handler)
   } else {
-    events.set(event, new Set());
+    events.set(event, new Set())
   }
 }
 
-export { emit, on, off, Event };
+export { emit, on, off, Event }

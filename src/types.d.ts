@@ -1,7 +1,7 @@
-import type Failed from '$application/Failed';
-import { CompleteUser, User } from '$entities.types';
+import type Failed from '$application/Failed'
+import { CompleteUser, User } from '$entities.types'
 
-export { Failed };
+export { Failed }
 
 export enum StorageKey {
   LOCATION = 'LOCATION',

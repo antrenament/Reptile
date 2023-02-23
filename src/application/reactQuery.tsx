@@ -10,9 +10,11 @@ const queryClient = new QueryClient({
   },
 });
 
+interface Props {
+  children: ReactNode;
+}
 
-
-export function ReactQueryProvider({ children }) {
+export function ReactQueryProvider({ children }: Props) {
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );

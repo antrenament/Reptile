@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { entries } from 'lodash';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { publicRoutes } from './routes';

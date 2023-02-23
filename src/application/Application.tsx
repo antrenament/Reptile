@@ -1,3 +1,4 @@
+import React from 'react'
 import Providers from '$application/Providers';
 import Router from '$application/Router';
 

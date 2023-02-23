@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function HeaderCarousel() {
   return (
-    <Carousel variant='dark' style={{ border: "1px solid gray" }}>
+    <Carousel variant="dark" style={{ border: '1px solid gray' }}>
       <Carousel.Item>
         <img
           className="d-block w-100"

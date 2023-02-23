@@ -1,14 +1,14 @@
 .About {
-    /* background-image:'url("${bgImg}")',  */
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* color: white; */
-    font-size: 24px;
+  /* background-image:'url("${bgImg}")',  */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* color: white; */
+  font-size: 24px;
 }
