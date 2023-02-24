@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "fortawesome/react-fontawesome",
     "@stitches/react": "^1.2.8",
     "bootstrap": "^5.2.3",
     "history": "^5.3.0",

@@ -7,12 +7,17 @@ import HomePagePostCard from '$components/PostCard';
 import AboutUsSection from '$components/AboutUs';
 
 import imgUrl01 from '/media/01.jpg';
+import Footer from '$components/Footer';
+import ImageBackground from '$components/ImageBackground';
+
+import Stack from 'react-bootstrap/Stack';
 
 export default function Home() {
   const da = 'dada';
   return (
     <>
       <Navigation />
+      <Stack gap={3}>
       <Container>
         <Row my={4} className="my-4">
           <HeaderCarousel />
@@ -28,6 +33,14 @@ export default function Home() {
           <AboutUsSection bgImg={imgUrl01} />
         </Row>
       </Container>
+
+      <Container>
+        <Row my={4} className="my-4">
+        <ImageBackground />
+      </Row>
+      </Container>
+      </Stack>
+      <Footer />
     </>
   );
 }
